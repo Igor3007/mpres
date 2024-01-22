@@ -1,0 +1,43 @@
+- 
+  const icproproom = [
+    {
+      img: '/dist/img/common/icons/',
+      name: 'Пл. квартиры',
+      val: 'Кол-во комнат',
+    },
+    {
+      img: '/dist/img/common/icons/',
+      name: '122 м2',
+      val: '4',
+    },
+    {
+      img: '/dist/img/common/icons/',
+      name: 'Кол-во спален',
+      val: '3',
+    },
+    {
+      img: '/dist/img/common/icons/',
+      name: 'Этаж',
+      val: '11',
+    },
+     
+  ];
+
+
+  const objects = [
+    {
+      id: ID 24368,
+      title: 'Квартира в доме «Сердце Столицы»',
+      images: [
+        '/img/common/image_1.jpg',
+        '/img/common/image_2.jpg',
+        '/img/common/image_3.jpg',
+        '/img/common/image_4.jpg',
+        '/img/common/image_5.jpg',
+      ],
+      iconprop: []
+
+    }
+  ];
+
+

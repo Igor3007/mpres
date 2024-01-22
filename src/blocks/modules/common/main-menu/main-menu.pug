@@ -1,0 +1,10 @@
+mixin item-contact(data)
+  .item-contact
+    .item-contact__icon: +bgimage(data.icon)
+    .item-contact__main
+      .item-contact__label= data.label
+      .item-contact__link: a(href=data.link)= data.text
+ 
+mixin main-menu(data)
+  .main-menu(data-menu="container")
+  

@@ -1,0 +1,74 @@
+mixin object-estate(data)
+    .object-estate
+        .object-estate__header
+            .object-estate__title= data.title
+            .object-estate__id= data.id 
+        .object-estate__main
+            .object-estate__images
+                .object-estate__gallery
+                    .splide
+                        .splide__track
+                            .splide__list
+                                each item in data.images
+                                    .splide__item: +picture(item) 
+                .object-estate__thumb
+                    .splide
+                        .splide__track
+                            .splide__list
+                                each item in data.images
+                                    .splide__item: +picture(item) 
+
+            .object-estate__details
+                .object-icon
+                    .object-icon__list
+                        each icprop in data.iconprop
+                            .object-icon__item
+                                .card-prop
+                                    .card-prop__icon: +bgimage(icprop.img)
+                                    .card-prop__main
+                                        .card-prop__name= icprop.name
+                                        .card-prop__val= icprop.val
+
+                .object-prop
+                    .object-prop__label Характеристики объекта:
+                    .object-prop__size
+                        ul
+                            li
+                                span Название ЖК
+                                i
+                                strong Сердце Столицы
+                            li
+                                span Район
+                                i
+                                strong Хорошево-Мневники
+                            li
+                                span Метро
+                                i
+                                strong Шелепиха
+                            li
+                                span Адрес
+                                i
+                                strong Шелепихинская набережная, 34к1
+                            li
+                                span Машиноместо
+                                i
+                                strong Да
+
+                .object-price
+                    .object-price__title Цена
+                    .object-price__wrp
+                        .object-price__rub 85 000 000 ₽
+                        .object-price__usd 1 043 481 $
+
+        .object-estate__desc
+            p Предлагается 4-комнатная квартира в ЖК «Сердце Столицы», расположенном на набережной Москва-реки.
+            p Интерьер квартиры выполнен в современном стиле с использованием качественных натуральных материалов. Квартира полностью укомплектована мебелью, оборудована современной бытовой техникой и готова к проживанию. Функциональная планировка включает в себя кухню, гостиную, 3 спальни, 3 санузла, гардеробную. Из окон квартиры открываются виды во внутренний двор-парк. В наличии машиноместо в подземном паркинге.
+            p «Сердце Столицы» – современный городской квартал, состоящий из 9 жилых корпусов, школы, детского сада, офисного центра. Комплекс располагается вдоль обустроенной городской набережной с прогулочной зоной, спортивными детскими площадками. Жилые дома находятся на огороженной, охраняемой территории.
+        .object-estate__comment
+            .comment-agent
+                .comment-agent__title Комментарий менеджера
+                .comment-agent__text Внутренний двор без машин, со своим парком, разделяющим корпуса, детскими и спортивными площадками. Круглосуточная служба консьержей. Удобная транспортная доступность и развитая инфраструктура района сделают проживание в квартире ещё более комфортным.
+        .object-estate__grage
+            .object-grage
+                .object-grage__title Комментарий менеджера
+                .object-grage__text Внутренний двор без машин, со своим парком, разделяющим корпуса, детскими и спортивными площадками. Круглосуточная служба консьержей. Удобная транспортная доступность и развитая инфраструктура района сделают проживание в квартире ещё более комфортным.

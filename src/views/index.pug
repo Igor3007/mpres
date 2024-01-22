@@ -1,0 +1,16 @@
+extends layouts/main
+ 
+block variables
+  include ../data/data.pug
+  - const title = "Metrium"
+ 
+
+block main
+  include ../blocks/modules/page-presentation/page-presentation.pug
+  +page-presentation()
+ 
+
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

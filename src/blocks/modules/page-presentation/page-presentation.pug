@@ -1,0 +1,9 @@
+include ../object-estate/object-estate.pug
+
+mixin page-presentation
+    section.section-page-presentation
+        .container
+            .page-presentation
+                .page-presentation__list
+                    each item in objects
+                        .page-presentation__item: +object-estate(item)
