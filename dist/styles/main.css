@@ -882,6 +882,16 @@ template {
   margin-left: auto;
 }
 
+.object-estate {
+  background: #fff;
+  padding: 20px;
+  border-radius: 24px;
+}
+
+.page-presentation__item {
+  padding-top: 20px;
+}
+
 /* common styles */
 
 @media screen and (min-width: 480px) {
