@@ -28,6 +28,12 @@ html {
     --red: #DF1F26;
     --orange: #EB7D00;
 
+    --text-secondary: #7F8285;
+    --text-base: #000;
+    --accent-01: #0B6D7A;
+    --bg-light: #F3F4F5;
+    --accent-02: #F5D29D;
+
 }
 
 html,
@@ -193,7 +199,7 @@ input[type="date"] {
 
     @media screen and (min-width: $w1440) {
         padding: 0 30px;
-        max-width: 1410px;
+        max-width: 1470px;
     }
 }
 

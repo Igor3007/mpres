@@ -1,5 +1,9 @@
 .page-presentation {
     &__item {
         padding-top: 20px;
+
+        @media screen and (min-width: $w992) {
+            padding-top: 32px;
+        }
     }
 }

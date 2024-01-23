@@ -2,9 +2,116 @@
     padding: 15px;
     background: #fff;
     border-radius: 10px;
-    display: flex;
+    margin-top: 16px;
+
+    @media screen and (min-width: $w760) {
+        display: flex;
+        align-content: center;
+        margin-top: 32px;
+        padding: 16px 32px;
+    }
+
 
     &__phone {
         margin-left: auto;
+    }
+
+    &__logo {
+
+        padding-bottom: 10px;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 0;
+        }
+
+        & .bgimage {
+            width: 93px;
+            height: 36px;
+            @include bgimage-contain;
+
+            @media screen and (min-width: $w760) {
+                width: 124px;
+                height: 48px;
+            }
+        }
+    }
+
+    &__manager {
+        margin-left: 0;
+        padding-bottom: 8px;
+
+        @media screen and (min-width: $w760) {
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+
+            margin-left: 32px;
+        }
+
+    }
+
+    &__contact {
+        @media screen and (min-width: $w760) {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.header-manager {
+
+
+
+    &__name {
+        color: var(--text-secondary, #7F8285);
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 153.846%;
+        letter-spacing: 0.26px;
+    }
+
+    &__phone {
+        color: var(--text-base, #000);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 155.556%;
+        letter-spacing: 0.36px;
+
+        @media screen and (min-width: $w760) {
+            font-size: 20px;
+        }
+    }
+}
+
+.header-contact {
+
+    display: flex;
+    align-items: center;
+
+    &__phone {
+        & a {
+            color: var(--accent-01, #0B6D7A);
+            font-size: 22px;
+            font-weight: 800;
+            line-height: 145.455%;
+            letter-spacing: 0.44px;
+
+            @media screen and (min-width: $w760) {
+                font-size: 24px;
+            }
+
+        }
+    }
+
+    &__msgr {
+
+        margin-left: 18px;
+
+        & .bgimage {
+            width: 28px;
+            height: 28px;
+            @include bgimage-contain;
+        }
     }
 }

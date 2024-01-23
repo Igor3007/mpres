@@ -6,17 +6,23 @@ mixin object-estate(data)
         .object-estate__main
             .object-estate__images
                 .object-estate__gallery
-                    .splide
+                    .splide(data-slider="gallery-main")
                         .splide__track
                             .splide__list
-                                each item in data.images
-                                    .splide__item: +picture(item) 
+                                each item,index in data.images
+                                    if !index
+                                        .splide__slide: +picture(item) 
+                                    else
+                                        .splide__slide: +pictureLazy(item) 
                 .object-estate__thumb
-                    .splide
+                    .splide(data-slider="gallery-thumb")
                         .splide__track
                             .splide__list
                                 each item in data.images
-                                    .splide__item: +picture(item) 
+                                    if index<4
+                                        .splide__slide: +picture(item) 
+                                    else
+                                        .splide__slide: +pictureLazy(item) 
 
             .object-estate__details
                 .object-icon
@@ -61,6 +67,9 @@ mixin object-estate(data)
                         .object-price__usd 1 043 481 $
 
         .object-estate__desc
+            .object-estate__desc-title
+                +icons('#ic_home')
+                span О квартире
             p Предлагается 4-комнатная квартира в ЖК «Сердце Столицы», расположенном на набережной Москва-реки.
             p Интерьер квартиры выполнен в современном стиле с использованием качественных натуральных материалов. Квартира полностью укомплектована мебелью, оборудована современной бытовой техникой и готова к проживанию. Функциональная планировка включает в себя кухню, гостиную, 3 спальни, 3 санузла, гардеробную. Из окон квартиры открываются виды во внутренний двор-парк. В наличии машиноместо в подземном паркинге.
             p «Сердце Столицы» – современный городской квартал, состоящий из 9 жилых корпусов, школы, детского сада, офисного центра. Комплекс располагается вдоль обустроенной городской набережной с прогулочной зоной, спортивными детскими площадками. Жилые дома находятся на огороженной, охраняемой территории.
@@ -68,7 +77,9 @@ mixin object-estate(data)
             .comment-agent
                 .comment-agent__title Комментарий менеджера
                 .comment-agent__text Внутренний двор без машин, со своим парком, разделяющим корпуса, детскими и спортивными площадками. Круглосуточная служба консьержей. Удобная транспортная доступность и развитая инфраструктура района сделают проживание в квартире ещё более комфортным.
-        .object-estate__grage
-            .object-grage
-                .object-grage__title Комментарий менеджера
-                .object-grage__text Внутренний двор без машин, со своим парком, разделяющим корпуса, детскими и спортивными площадками. Круглосуточная служба консьержей. Удобная транспортная доступность и развитая инфраструктура района сделают проживание в квартире ещё более комфортным.
+        .object-estate__grade
+            .object-grade
+                .object-grade__title Оцените предложение
+                .object-grade__vote
+                    .object-grade__like(data-vote="like"): +icons('#ic_like')
+                    .object-grade__dislike(data-vote="dislike"): +icons('#ic_dislike')
